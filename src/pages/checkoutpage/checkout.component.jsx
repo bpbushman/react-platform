@@ -1,5 +1,5 @@
 import React from 'react';
-import{ connect } from 'react-redux';
+import { connect } from 'react-redux';
 import { createStructuredSelector } from 'reselect';
 import { selectCartItems, selectCartTotal } from '../../redux/cart/cart.selectors';
 import StripeCheckoutButton from '../../components/stripe-button/stripe-button.component';
