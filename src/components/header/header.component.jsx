@@ -8,7 +8,8 @@ import { selectCurrentUser } from '../../redux/user/user.selector';
 import CartIcon from '../cart-icon/cart-icon.component';
 import CartDropDown from '../cart/cart.component';
 
-import {HeaderContainer,OptionDiv,OptionLink,OptionsContainer,LogoContainer} from './header.styles';
+import { HeaderContainer, OptionLink, OptionsContainer, LogoContainer } 
+    from './header.styles';
 
 const Header = ({ currentUser, hidden }) => (
     <HeaderContainer>
@@ -23,8 +24,12 @@ const Header = ({ currentUser, hidden }) => (
                 CONTACT
             </OptionLink>
             {currentUser
-                ? (<OptionDiv onClick={() => auth.signOut()}>SIGN OUT</OptionDiv>)
-                : (<OptionLink to='/signin'> SIGN IN</OptionLink>)}
+                ? (<OptionLink as='div' onClick={() => auth.signOut()}>
+                        SIGN OUT
+                    </OptionLink>)
+                : (<OptionLink to='/signin'>
+                        SIGN IN
+                    </OptionLink>)}
             <CartIcon />
         </OptionsContainer>
         {hidden
