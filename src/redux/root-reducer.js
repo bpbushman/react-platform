@@ -7,7 +7,7 @@ import cartReducer from './cart/cart.reducer';
 import directoryReducer from './directory/directory.reducer';
 import shopReducer from './shop/shop.reducer';
 
-const persistCofig = {
+const persistConfig = {
     key: 'root',
     storage,
     whitelist: ['cart']
@@ -20,4 +20,4 @@ const rootReducer = combineReducers({
     shop: shopReducer
 });
 
-export default persistReducer(persistCofig, rootReducer);
+export default persistReducer(persistConfig, rootReducer);
